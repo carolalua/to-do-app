@@ -1,0 +1,32 @@
+<ul>
+    <li *ngFor="let item of items" [ngClass]="{'checked': item.isComplete}">
+      <div>
+          <input type="checkbox" [checked]="item.isComplete" (click)="toggleItemClicked(item)">
+          <p id="text-todo" [class.striked]="item.isComplete">{{ item.toDoText}}</p>
+          <span id="name-user-todo"> {{ user.name }} </span>
+          <img src="assets/images/user.png" alt="User Photo">
+          <div class="dropdown">
+            <i class="fa-solid fa-ellipsis"></i>
+            <div class="dropdown-content" id="dropdown-options">
+              <button (click)="editItemCliked(item)">✏️ Edit</button>
+              <button (click)="deleteItemClicked(item)" id="button-delete">🗑️ Delete</button>
+            </div>
+          </div>
+
+          <div class="overlay" *ngIf="isEditing" (click)="closePopup()"></div>
+
+          <div class="popup" *ngIf="isEditing">
+            <div class="popup-content">
+              <form>
+                <h2 id="title-popup">Edit Task</h2>
+                <textarea class="items-popup" *ngIf="currentItem" [(ngModel)]="currentItem.toDoText" name="edit-item" id="edit-item" rows="7" value="{{ currentItem.toDoText}}"></textarea>
+                <div class="buttons-popup">
+                  <button class="cancel-button" (click)="closePopup()">Cancel</button>
+                  <button class="save-button" type="submit" (click)="$event.preventDefault(); saveEditClicked()">Save</button>
+                </div>
+              </form>    
+            </div>
+          </div>
+      </div>
+    </li>
+</ul>
