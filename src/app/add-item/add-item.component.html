@@ -1,0 +1,16 @@
+<button id="add-new" (click)="openAddNewPopup()">+ Add new </button>
+
+<div class="overlay" *ngIf="isAdding" (click)="closePopup()"></div>
+
+<div class="popup" *ngIf="isAdding">
+    <div class="popup-content">
+        <h2>Add Task</h2>
+        <form>
+            <textarea class="items-popup" name="new-item" [(ngModel)]="newItemText" id="new-item" rows="7" placeholder="What do you need to do...."></textarea>
+            <div class="buttons-popup">
+                <button class="cancel-button" (click)="closePopup()">Cancel</button>
+                <button class="save-button" type="submit" (click)="$event.preventDefault(); addNewItem()">Save</button>
+            </div>
+        </form>
+    </div>
+</div>

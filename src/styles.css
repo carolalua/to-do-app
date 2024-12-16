@@ -1,0 +1,24 @@
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black-100: #242424;
+    --white-100: #ffffff;
+    --gray-70: #93979C;
+    --gray-30: #D0D3D4;
+    --gray-10: #EFF0F1;
+    --gray-5: #F7F8F8;
+    --blue-100: #086BCD;
+    --delete: #E41E1E;
+    --user-lilac: #9F82F8;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 10px;
+}

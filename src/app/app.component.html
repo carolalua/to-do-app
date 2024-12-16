@@ -1,0 +1,12 @@
+<section class="all">
+  <app-header [user]="user"></app-header>
+  <section class="list-todo">
+    <todo-list 
+    [items]="items" 
+    (deleteItem)="deleteItem($event)"
+    (saveEdit)="saveEdit($event)"
+    (toggleItem)="toggleItem($event)"
+    [user]="user"></todo-list>
+    <add-item (taskAdded)="addTask($event)"></add-item>
+  </section>
+</section>
