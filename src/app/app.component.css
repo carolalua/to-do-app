@@ -9,12 +9,13 @@
     height: calc(100vh - 48px);
     width: calc(100vw - 48px);
     margin: 24px;
+    overflow: auto;
 }
 
 @media (max-width: 478px) {
     .all{
         padding: 48px 18px 48px 18px;
-        height: calc(100vw - 18px);
+        height: calc(100vh - 18px);
         width: calc(100vw - 18px);
         margin: 12px;
     }

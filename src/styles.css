@@ -16,6 +16,10 @@
     --user-lilac: #9F82F8;
 }
 
+body {
+    height: 100%;
+}
+
 h2 {
     font-size: 24px;
     font-weight: 600;
